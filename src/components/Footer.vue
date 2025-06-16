@@ -14,5 +14,6 @@ footer {
   width: 100%;
   height: 4.2vh;
   margin-top: 0.3rem;
+  background-color: #CCD5AE;
 }
 </style>

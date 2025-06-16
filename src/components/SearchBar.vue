@@ -74,6 +74,7 @@ input {
   font-size: 1.2rem;
   font-family: 'Lora', serif;
   background-color: #FAEDCE;
+  border: 0.15rem solid black;
 }
 
 button {
@@ -86,6 +87,36 @@ button {
   cursor: pointer;
   font-family: 'Lora', serif;
   background-color: #F2E2B1;
+}
+
+@media only screen and (max-width: 768px) {
+  div {
+    padding: 0;
+    margin-bottom: 5%;
+    justify-content: flex-start;
+    width: 100%;
+    height: 4vh;
+    font-size: 0.8rem;
+    gap: 0.1rem;
+  }
+  select {
+    margin: 0 0 0 0.1rem;
+    width: 30%;
+    height: 70%;
+    font-size: 0.8rem;
+  }
+  input {
+    margin: 0;
+    width: 60%;
+    height: 60%;
+    font-size: 0.8rem;
+  }
+  button {
+    margin: 0 0.1rem 0 0;
+    height: 70%;
+    width: 20%;
+    font-size: 0.5rem;
+  }
 }
 
 </style>

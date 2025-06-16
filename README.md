@@ -2,6 +2,11 @@
 
 **QuicKitchen** is a simple recipe finder web app built with Vue.js and TheMealDB API.
 
+## Preview
+
+![QuicKitchen Preview.png](src/assets/QuicKitchen%20Preview.png)
+![QuicKitchen Modal Preview.png](src/assets/QuicKitchen%20Modal%20Preview.png)
+
 ## Features
 
 - Search meals by:

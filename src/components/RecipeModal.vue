@@ -125,7 +125,7 @@ img {
 }
 
 #details {
-  width: 69.6%;
+  width: 69%;
   border: 0.15rem solid black;
 }
 
@@ -151,6 +151,29 @@ li {
 p {
   font-size: 1.3rem;
   padding: 0 1rem 1rem 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #modal {
+    width: 87.2vw;
+  }
+  #image{
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 25vh;
+  }
+  #details {
+    width: 100%;
+  }
+  #instructions {
+    width: 100%;
+    flex-direction: column;
+  }
+  li {
+    width: 30vh;
+  }
 }
 
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div id = "list">
-    <RecipeCard v-for= "(mealIndex, i) in json.length" :key = "i" v-bind:recipe = "json[mealIndex - 1]"></RecipeCard>
+    <h1 v-show = "isNoResults">NO MEALS FOUND</h1>
+    <RecipeCard v-show = "!isNoResults" v-for= "(mealIndex, i) in json.length" :key = "i" v-bind:recipe = "json[mealIndex - 1]"></RecipeCard>
   </div>
 </template>
 
@@ -18,7 +19,8 @@ export default {
     return {
       search: "",
       json: "",
-      filter: ""
+      filter: "",
+      isNoResults: false,
     }
   },
   created() {
@@ -58,9 +60,17 @@ export default {
     searchMeal() {
       axios.get(this.searchMeal)
         .then(response => {
-          this.json = response.data.meals;
+          if (response.data.meals !== null) {
+            this.isNoResults = false;
+            this.json = response.data.meals;
+          } else {
+            this.isNoResults = true;
+          }
         })
-        .catch(err => {console.log(err)})
+        .catch(error => {
+            console.log(error);
+          }
+        )
     }
   }
 }
@@ -81,6 +91,23 @@ export default {
   border: 0.15rem solid black;
   margin-top: 0.5rem;
   background-color: #FAEDCE;
+}
+
+#list h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #list {
+    width: 87.2vw;
+    flex-wrap: wrap;
+
+  }
+  select {
+    width: 20vw;
+  }
 }
 
 </style>

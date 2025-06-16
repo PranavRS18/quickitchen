@@ -66,4 +66,14 @@ img {
   border: 0.15rem solid black;
 }
 
+@media only screen and (max-width: 768px) {
+  #recipe-card {
+    width: 100%;
+  }
+  img {
+    width: 80%;
+    height: 80%;
+  }
+}
+
 </style>

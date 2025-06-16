@@ -33,7 +33,7 @@ export default {
         {name : 'Area', link : null},
         {name : 'Ingredients', link : null},
         {name : 'TheMealDB API', link : 'https://www.themealdb.com/api.php'},
-        {name : 'Contact Me', link : null},
+        {name : 'Contact Me', link : "https://github.com/PranavRS18"},
       ]
     }
   }
@@ -90,5 +90,20 @@ a {
 a:visited {
   color: black;
 }
+
+@media only screen and (max-width: 768px) {
+  header {
+    width: 95vw;
+    flex-direction: column;
+  }
+  img {
+    width: 40vw;
+    height: 8vh;
+  }
+  ul {
+    display: none;
+  }
+}
+
 
 </style>
